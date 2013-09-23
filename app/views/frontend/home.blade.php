@@ -10,7 +10,7 @@
 	    	<hr />
 	    </p>
 	    <p align="center">	    	
-	    	<a class="btn btn-danger btn-lg" href="">DOWNLOAD BBCMS</a><br />
+	    	<a class="btn btn-danger btn-lg" href="https://github.com/binhbeer/bbcms" target="_blank">DOWNLOAD BBCMS</a><br />
 	    	<small>v1.0 beta</small>
 	    </p>
 	  </div>
