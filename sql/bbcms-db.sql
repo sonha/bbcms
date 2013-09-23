@@ -4,7 +4,7 @@
 --
 -- Host: 127.0.0.1:3306
 
--- Generation Time: Sep 23, 2013 at 08:57 PM
+-- Generation Time: Sep 23, 2013 at 10:05 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.17
 
@@ -70,14 +70,14 @@ CREATE TABLE `category_post` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `cat_con_unique` (`category_id`,`post_id`),
   KEY `category_content_content_id_foreign` (`post_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=23 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=24 ;
 
 --
 -- Dumping data for table `category_post`
 --
 
 INSERT INTO `category_post` (`id`, `category_id`, `post_id`, `created_at`, `updated_at`) VALUES
-(22, 1, 1, '2013-09-23 12:40:25', '2013-09-23 12:40:25'),
+(23, 1, 1, '2013-09-23 13:06:58', '2013-09-23 13:06:58'),
 (21, 3, 3, '2013-09-23 10:18:09', '2013-09-23 10:18:09'),
 (20, 1, 3, '2013-09-23 10:18:09', '2013-09-23 10:18:09');
 
@@ -147,24 +147,20 @@ CREATE TABLE `medias` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 --
 -- Dumping data for table `medias`
 --
 
 INSERT INTO `medias` (`id`, `title`, `mpath`, `mname`, `user_id`, `created_at`, `updated_at`) VALUES
-(10, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379950344.jpg', 1, '2013-09-23 08:32:24', '2013-09-23 08:32:24'),
-(9, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379950326.jpg', 1, '2013-09-23 08:32:07', '2013-09-23 08:32:07'),
-(3, '', 'uploads/medias/2013/09/20', '20.09.2013_bb_1379712966.png', 1, '2013-09-20 14:36:07', '2013-09-20 14:36:07'),
-(4, '', 'uploads/medias/2013/09/20', '20.09.2013_bb_1379712998.png', 1, '2013-09-20 14:36:39', '2013-09-20 14:36:39'),
-(5, '', 'uploads/medias/2013/09/20', '20.09.2013_bb_1379713015.png', 1, '2013-09-20 14:36:55', '2013-09-20 14:36:55'),
-(6, '', 'uploads/medias/2013/09/20', '20.09.2013_bb_1379713028.png', 1, '2013-09-20 14:37:09', '2013-09-20 14:37:09'),
-(7, '', 'uploads/medias/2013/09/20', '20.09.2013_bb_1379713037.png', 1, '2013-09-20 14:37:17', '2013-09-20 14:37:17'),
-(8, '', 'uploads/medias/2013/09/20', '20.09.2013_bb_1379713051.png', 1, '2013-09-20 14:37:32', '2013-09-20 14:37:32'),
-(11, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379950459.jpg', 1, '2013-09-23 08:34:20', '2013-09-23 08:34:20'),
-(12, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379951318.jpg', 1, '2013-09-23 08:48:39', '2013-09-23 08:48:39'),
-(13, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379951796.jpg', 1, '2013-09-23 08:56:37', '2013-09-23 08:56:37');
+(14, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966634.png', 1, '2013-09-23 13:03:54', '2013-09-23 13:03:54'),
+(15, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966639.png', 1, '2013-09-23 13:03:59', '2013-09-23 13:03:59'),
+(16, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966645.png', 1, '2013-09-23 13:04:06', '2013-09-23 13:04:06'),
+(17, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966650.png', 1, '2013-09-23 13:04:10', '2013-09-23 13:04:10'),
+(18, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966655.png', 1, '2013-09-23 13:04:15', '2013-09-23 13:04:15'),
+(19, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966660.png', 1, '2013-09-23 13:04:21', '2013-09-23 13:04:21'),
+(20, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966666.png', 1, '2013-09-23 13:04:26', '2013-09-23 13:04:26');
 
 -- --------------------------------------------------------
 
@@ -227,7 +223,7 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `user_id`, `category_id`, `title`, `slug`, `content`, `excerpt`, `media_id`, `meta_title`, `meta_description`, `meta_keywords`, `status`, `allow_comments`, `is_featured`, `is_popular`, `showon_homepage`, `comment_count`, `post_type`, `publish_date`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 1, 1, 'BBCMS phi&ecirc;n bản 1.0', 'bbcms-phien-ban-10', '<p><span style="line-height: 1.6em;">L&agrave; ứng dụng ph&aacute;t triển dựa tr&ecirc;n framework m&atilde; nguồn mở </span><a href="http://laravel.com/" style="line-height: 1.6em;">Laravel 4</a><span style="line-height: 1.6em;">.</span></p>\r\n\r\n<h2>Chức năng</h2>\r\n\r\n<ul>\r\n	<li>Twitter Bootstrap 3</li>\r\n	<li>jQuery 1.10.2</li>\r\n	<li>T&ugrave;y biến&nbsp;Error Pages:\r\n	<ul>\r\n		<li>403</li>\r\n		<li>404</li>\r\n		<li>500</li>\r\n		<li>503</li>\r\n	</ul>\r\n	</li>\r\n	<li><strong>Editor</strong>\r\n	<ul>\r\n		<li>Quản l&yacute; người d&ugrave;ng v&agrave; nh&oacute;m người d&ugrave;ng\r\n		<ul>\r\n			<li>Th&ecirc;m sửa x&oacute;a người d&ugrave;ng</li>\r\n			<li>Ph&acirc;n quyền người d&ugrave;ng cụ thể</li>\r\n			<li>Th&ecirc;m sửa x&oacute;a nh&oacute;m người d&ugrave;ng</li>\r\n			<li>Ph&acirc;n quyền nh&oacute;m người d&ugrave;ng</li>\r\n		</ul>\r\n		</li>\r\n		<li>Quản l&yacute; tin\r\n		<ul>\r\n			<li>Đăng tin, x&eacute;t duyệt tin, xuất bản tin (theo ph&acirc;n quyền)</li>\r\n		</ul>\r\n		</li>\r\n		<li>Quản l&yacute; chuy&ecirc;n mục (đa cấp)</li>\r\n		<li>Quản l&yacute; b&igrave;nh luận</li>\r\n		<li>Quản l&yacute; thư viện\r\n		<ul>\r\n			<li>Tải ảnh, đặt đại diện</li>\r\n			<li>Thư viện theo người d&ugrave;ng</li>\r\n		</ul>\r\n		</li>\r\n		<li>Quản l&yacute; trang</li>\r\n	</ul>\r\n	</li>\r\n	<li><strong>Hệ thống đăng nhập</strong>\r\n	<ul>\r\n		<li>Đăng nhập</li>\r\n		<li>Đăng k&yacute;</li>\r\n		<li>Lấy lại mật khẩu</li>\r\n		<li>K&iacute;ch hoạt người d&ugrave;ng</li>\r\n	</ul>\r\n	</li>\r\n	<li><strong>T&agrave;i khoản người d&ugrave;ng</strong></li>\r\n	<li><strong>Trang li&ecirc;n hệ</strong></li>\r\n	<li><strong><a href="https://github.com/cartalyst/sentry">Cartalyst Sentry 2</a></strong></li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h2>Y&ecirc;u cầu hệ thống​</h2>\r\n\r\n<ul>\r\n	<li>PHP 5.3.7 or later</li>\r\n	<li>MCrypt PHP Extension</li>\r\n</ul>\r\n\r\n<h2><br />\r\nC&agrave;i đặt</h2>\r\n\r\n<p><em>đang cập nhật...</em><br />\r\n&nbsp;</p>\r\n\r\n<h2>Một số h&igrave;nh ảnh về BBCMS</h2>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/20/520x500/20.09.2013_bb_1379712876.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center">&nbsp;</p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/20/520x500/20.09.2013_bb_1379712966.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center">&nbsp;</p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/20/520x500/20.09.2013_bb_1379712998.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center">&nbsp;</p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/20/520x500/20.09.2013_bb_1379713015.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/20/520x500/20.09.2013_bb_1379713028.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/20/520x500/20.09.2013_bb_1379713037.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/20/520x500/20.09.2013_bb_1379713051.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p>&nbsp;</p>\r\n', 'Chỉ bao gồm các thành phần cơ bản nhất của 1 editor. Bước đầu giúp các lập trình viên xây dựng các ứng dụng web về trang thông tin tổng hợp, tòa soạn điện tử mini, các trang thông tin doanh nghiệp...', 8, '', '', '', 'published', 1, 1, 1, 1, 0, 'post', '2013-09-21 14:40:17', '2013-09-20 10:29:31', '2013-09-23 12:40:25', NULL),
+(1, 1, 1, 'BBCMS phi&ecirc;n bản 1.0', 'bbcms-phien-ban-10', '<p><span style="line-height: 1.6em;">L&agrave; ứng dụng ph&aacute;t triển dựa tr&ecirc;n framework m&atilde; nguồn mở </span><a href="http://laravel.com/" style="line-height: 1.6em;">Laravel 4</a><span style="line-height: 1.6em;">.</span></p>\r\n\r\n<h2>Chức năng</h2>\r\n\r\n<ul>\r\n	<li>Twitter Bootstrap 3</li>\r\n	<li>jQuery 1.10.2</li>\r\n	<li>T&ugrave;y biến&nbsp;Error Pages:\r\n	<ul>\r\n		<li>403</li>\r\n		<li>404</li>\r\n		<li>500</li>\r\n		<li>503</li>\r\n	</ul>\r\n	</li>\r\n	<li><strong>Editor</strong>\r\n	<ul>\r\n		<li>Quản l&yacute; người d&ugrave;ng v&agrave; nh&oacute;m người d&ugrave;ng\r\n		<ul>\r\n			<li>Th&ecirc;m sửa x&oacute;a người d&ugrave;ng</li>\r\n			<li>Ph&acirc;n quyền người d&ugrave;ng cụ thể</li>\r\n			<li>Th&ecirc;m sửa x&oacute;a nh&oacute;m người d&ugrave;ng</li>\r\n			<li>Ph&acirc;n quyền nh&oacute;m người d&ugrave;ng</li>\r\n		</ul>\r\n		</li>\r\n		<li>Quản l&yacute; tin\r\n		<ul>\r\n			<li>Đăng tin, x&eacute;t duyệt tin, xuất bản tin (theo ph&acirc;n quyền)</li>\r\n		</ul>\r\n		</li>\r\n		<li>Quản l&yacute; chuy&ecirc;n mục (đa cấp)</li>\r\n		<li>Quản l&yacute; b&igrave;nh luận</li>\r\n		<li>Quản l&yacute; thư viện\r\n		<ul>\r\n			<li>Tải ảnh, đặt đại diện</li>\r\n			<li>Thư viện theo người d&ugrave;ng</li>\r\n		</ul>\r\n		</li>\r\n		<li>Quản l&yacute; trang</li>\r\n	</ul>\r\n	</li>\r\n	<li><strong>Hệ thống đăng nhập</strong>\r\n	<ul>\r\n		<li>Đăng nhập</li>\r\n		<li>Đăng k&yacute;</li>\r\n		<li>Lấy lại mật khẩu</li>\r\n		<li>K&iacute;ch hoạt người d&ugrave;ng</li>\r\n	</ul>\r\n	</li>\r\n	<li><strong>T&agrave;i khoản người d&ugrave;ng</strong></li>\r\n	<li><strong>Trang li&ecirc;n hệ</strong></li>\r\n	<li><strong><a href="https://github.com/cartalyst/sentry">Cartalyst Sentry 2</a></strong></li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h2>Y&ecirc;u cầu hệ thống​</h2>\r\n\r\n<ul>\r\n	<li>PHP 5.3.7 or later</li>\r\n	<li>MCrypt PHP Extension</li>\r\n</ul>\r\n\r\n<h2><br />\r\nC&agrave;i đặt</h2>\r\n\r\n<p><em>đang cập nhật...</em><br />\r\n&nbsp;</p>\r\n\r\n<h2>Một số h&igrave;nh ảnh về BBCMS</h2>\r\n\r\n<p align="center">&nbsp;</p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966634.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966639.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966645.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966650.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966655.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966660.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966666.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center">&nbsp;</p>\r\n', 'Chỉ bao gồm các thành phần cơ bản nhất của 1 editor. Bước đầu giúp các lập trình viên xây dựng các ứng dụng web về trang thông tin tổng hợp, tòa soạn điện tử mini, các trang thông tin doanh nghiệp...', 17, '', '', '', 'published', 1, 1, 1, 1, 0, 'post', '2013-09-21 14:40:17', '2013-09-20 10:29:31', '2013-09-23 13:06:58', NULL),
 (2, 1, 0, 'Giới thiệu', 'gioi-thieu', '<p>Giới thiệu</p>\r\n', 'Giới thiệu', 0, NULL, NULL, NULL, 'hidden', 1, 0, 0, 0, 0, 'page', '2013-09-23 09:39:05', '2013-09-23 02:26:17', '2013-09-23 02:39:05', NULL),
 (3, 1, 0, 'Hướng dẫn c&agrave;i đặt', 'huong-dan-cai-dat', '<p>Hướng dẫn c&agrave;i đặt</p>\r\n', 'Hướng dẫn cài đặt', 0, '', '', '', 'published', 0, 0, 0, 0, 0, 'post', '2013-09-22 17:00:00', '2013-09-23 07:41:07', '2013-09-23 10:18:09', NULL);
 
@@ -273,14 +269,15 @@ CREATE TABLE `tag_post` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `tag_post`
 --
 
 INSERT INTO `tag_post` (`id`, `post_id`, `tag_id`, `created_at`, `updated_at`) VALUES
-(2, 3, 1, '2013-09-23 11:38:25', '2013-09-23 11:38:25');
+(2, 3, 1, '2013-09-23 11:38:25', '2013-09-23 11:38:25'),
+(5, 1, 1, '2013-09-23 13:00:13', '2013-09-23 13:00:13');
 
 -- --------------------------------------------------------
 
