@@ -15,10 +15,10 @@
 	    </p>
 	  </div>
 	</div>
+	<h2>Tin mới</h2>
+	<hr />
 	@foreach ($posts as $post)
 	<div class="row">
-		<h2>Tin mới</h2>
-		<hr />
 		<div class="span8">
 
 			<!-- Post Content -->

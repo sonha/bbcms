@@ -9,9 +9,9 @@
 			BBCMS v1.0
 			@show
 		</title>
-		<meta name="keywords" content="your, awesome, keywords, here" />
-		<meta name="author" content="Jon Doe" />
-		<meta name="description" content="Lorem ipsum dolor sit amet, nihil fabulas et sea, nam posse menandri scripserit no, mei." />
+		<meta name="keywords" content="bbcms" />
+		<meta name="author" content="BinhBEER" />
+		<meta name="description" content="Content Management System." />
 
 		<!-- Mobile Specific Metas
 		================================================== -->
@@ -143,7 +143,7 @@
 		  js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=461580803910206";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
-		
+
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

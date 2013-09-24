@@ -2,6 +2,7 @@
 
 use Swift_Mailer;
 use Illuminate\Support\ServiceProvider;
+use Swift_AWSTransport as AWSTransport;
 use Swift_SmtpTransport as SmtpTransport;
 use Swift_MailTransport as MailTransport;
 use Swift_SendmailTransport as SendmailTransport;
@@ -95,9 +96,33 @@ class MailServiceProvider extends ServiceProvider {
 			case 'mail':
 				return $this->registerMailTransport($config);
 
+			case 'ses':
+				return $this->registerSESTransport($config);
+
 			default:
 				throw new \InvalidArgumentException('Invalid mail driver.');
 		}
+	}
+
+	/**
+	 * Register the SES Swift Transport instance.
+	 *
+	 * @param  array  $config
+	 * @return void
+	 */
+	protected function registerSESTransport($config)
+	{
+		$this->app['swift.transport'] = $this->app->share(function($app) use ($config)
+		{
+			extract($config);
+
+			// The Swift AWS transport instance will allow us to use any SMTP backend
+			// for delivering mail such as Sendgrid, Amazon SMS, or a custom server
+			// a developer has available. We will just pass this configured host.
+			$transport = AWSTransport::newInstance($aws_access_key, $aws_secret_key );
+
+			return $transport;
+		});
 	}
 
 	/**

@@ -3,11 +3,11 @@
 @section('content')
 <p>Hello {{ $user->first_name }},</p>
 
-<p>Welcome to SiteNameHere! Please click on the following link to confirm your SiteNameHere account:</p>
+<p>Welcome to BBCMS! Please click on the following link to confirm your BBCMS account:</p>
 
 <p><a href="{{ $activationUrl }}">{{ $activationUrl }}</a></p>
 
 <p>Best regards,</p>
 
-<p>SiteNameHere Team</p>
+<p>BBCMS Team</p>
 @stop

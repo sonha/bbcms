@@ -32,7 +32,7 @@
 <p>{{ $post->content }}</p>
 
 <div>
-	<span class="badge badge-info" title="{{ $post->created_at }}">Posted {{ $post->created_at->diffForHumans() }}</span>
+	<span class="badge badge-info" title="{{ $post->created_at }}">Đăng {{ $post->created_at->diffForHumans() }}</span>
 </div>
 
 <hr />
