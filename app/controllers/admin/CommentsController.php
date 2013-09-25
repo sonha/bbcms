@@ -96,7 +96,7 @@ class CommentsController extends AdminController {
 		}
 
 		// Update the comment data
-		$comment->content            = e(Input::get('content'));
+		$comment->content            = Input::get('content');
 		$comment->status            = e(Input::get('status'));
 
 		// Was the comment updated?

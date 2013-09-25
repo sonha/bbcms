@@ -15,7 +15,9 @@ use Lang;
 use Post;
 use Category;
 use CategoryPost;
+use PostTag;
 use Media;
+use DateTime;
 use Redirect;
 use Sentry;
 use Str;
@@ -98,8 +100,7 @@ class NewsController extends AdminController {
 		$rules = array(
 			'title'   => 'required|min:3',
 			'excerpt' => 'required|min:3',
-			'content' => 'required|min:3',
-			'publish_date' => 'required',
+			'content' => 'required|min:3'
 		);
 
 		// Create a new validator instance from our validation rules
@@ -116,7 +117,7 @@ class NewsController extends AdminController {
 		$post = new Post;
 
 		// Update the news post data
-		$post->title            = e(Input::get('title'));
+		$post->title            = Input::get('title');
 
 		if (Input::get('slug'))
 		{
@@ -131,7 +132,7 @@ class NewsController extends AdminController {
 		$post->is_popular       = e(Input::get('is_popular', 0));
 		$post->showon_homepage	= e(Input::get('showon_homepage', 0));
 		$post->allow_comments	= e(Input::get('allow_comments', 0));
-		$post->publish_date     = e(Input::get('publish_date'));
+		$post->publish_date     = Input::get('publish_date') ? Input::get('publish_date') : new DateTime;
 		$post->media_id     	= e(Input::get('media_id'));
 		$post->status          	= e(Input::get('status'));
 
@@ -143,6 +144,19 @@ class NewsController extends AdminController {
 		// Was the news post created?
 		if($post->save())
 		{
+			// Update reference topics
+			$topicIds = e(Input::get('topics'));
+			if($topicIds) {
+	  			$post->insertTags($topicIds);
+			}
+
+			// Update reference tags
+			$tagIds = e(Input::get('tags'));
+			if($tagIds) {
+	  			$post->insertTags($tagIds);
+			}
+
+			// Update reference categories
 			if(Input::get('categories'))
 	  		{
 	  			foreach(Input::get('categories') as $cateId)
@@ -189,9 +203,21 @@ class NewsController extends AdminController {
 		if($post->media_id) {
 			$media = Media::find($post->media_id);
 		}
+
+		$topics = $post->topics;
+		$topicIds = array();
+		foreach ($topics as $t) {
+			$topicIds[] = $t->id;
+		}
+
+		$tags = $post->tags;
+		$tagIds = array();
+		foreach ($tags as $t) {
+			$tagIds[] = $t->id;
+		}
 		
 		// Show the page
-		return View::make('backend/news/edit', compact('post', 'categories', 'catIds', 'media'));
+		return View::make('backend/news/edit', compact('post', 'categories', 'catIds', 'topicIds', 'tagIds', 'media', 'topics', 'tags'));
 	}
 
 	/**
@@ -258,6 +284,21 @@ class NewsController extends AdminController {
 		// Was the news post updated?
 		if($post->save())
 		{
+			// Update reference topics
+			$topicIds = e(Input::get('topics'));
+			if($topicIds) {
+	  			$post->removeTag();
+	  			$post->insertTags($topicIds);
+			}
+
+			// Update reference tags
+			$tagIds = e(Input::get('tags'));
+			if($tagIds) {
+	  			$post->removeTag();
+	  			$post->insertTags($tagIds);
+			}
+
+			// Update reference categories
 			if(Input::get('categories'))
 	  		{
 	  			$post->removeCate();

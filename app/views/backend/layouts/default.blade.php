@@ -42,7 +42,8 @@
 		<script src="{{ asset('assets/js/bootstrap/bootstrap.min.js') }}"></script>
 		<script src="{{ asset('assets/js/bootstrap/bootstrap-datetimepicker.min.js') }}"></script>
 		<script src="{{ asset('assets/js/bootstrap/bootstrap-datetimepicker.pt-vi.js') }}"></script>
-		<script src="{{ asset('assets/js/ckeditor/ckeditor.js?v=2') }}"></script>
+		<script src="{{ asset('assets/js/bootstrap/typeahead.min.js') }}"></script>
+		<script src="{{ asset('assets/js/ckeditor/ckeditor.js') }}"></script>
 		<script src="{{ asset('assets/js/admin.js') }}"></script>		
 	</head>
 
@@ -79,7 +80,7 @@
 			          <li><a href="{{ route('lien-he') }}"><i class="icon-file icon-white"></i> Liên hệ</a></li>
 			        </ul>
 		        </div>
-		        <div class="col-md-3">
+		        <div class="col-md-3" align="center">
 		        	Give me some beer to keep updating ... <hr />
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 						<input type="hidden" name="cmd" value="_s-xclick">
@@ -106,6 +107,15 @@
 			    	format: 'yyyy-MM-dd hh:mm:ss ',
 			    	language: 'pt-BR'
 			    });
+
+			    jQuery('input#tagName').typeahead({
+				  name: 'tagname',
+				  local: ['Bình BEER', 'BBCMS'],
+				  valueKey: 'name',
+				  remote: {
+				  	url: '/admin/tags/ajaxlist?keyword=%QUERY',
+				  }
+				});
 
 			    CKEDITOR.replace('textareabox',{ toolbar:'CusToolbar', height: '400px'} );
 

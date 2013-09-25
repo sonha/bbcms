@@ -34,6 +34,32 @@ class TagsController extends AdminController {
 		// Show the page
 		return View::make('backend/tags/index', compact('tags'));
 	}
+
+	public function getIndexPopup()
+	{
+		$keyword = Input::get('keyword');
+		$order = Input::get('order');
+		$keyslug = Str::slug($keyword);
+		// Grab all the tags
+		$tags = Tag::where('slug', 'like', '%'.$keyslug.'%')->where('type', 'topic')->where('status', 'on')->orderBy('created_at', ($order ? $order : 'desc'))->paginate(10);
+
+		// Show the page
+		return View::make('backend/tags/indexpopup', compact('tags', 'keyword', 'order'));
+	}
+
+	/**
+	 * News tag list.
+	 *
+	 * @return Redirect
+	 */
+	public function getAjaxList()
+	{
+		$keyword = Str::slug(Input::get('keyword'));
+		// Grab all the tags
+		$tags = Tag::select('name')->where('slug', 'like', '%'.$keyword.'%')->where('type', 'tag')->where('status', 'on')->orderBy('created_at', 'desc')->take(10)->get();
+
+		return $tags->toJson();
+	}
 	/**
 	 * Tags create.
 	 *
@@ -46,6 +72,51 @@ class TagsController extends AdminController {
 
 		// Show the page
 		return View::make('backend/tags/create');
+	}
+
+	/**
+	 * News tag create form processing.
+	 *
+	 * @return Redirect
+	 */
+	public function postCreateTag()
+	{
+		if ( !Sentry::getUser()->hasAnyAccess(['news','news.createtag']) )
+			return View::make('backend/notallow');
+
+		// Declare the rules for the form validation
+		$rules = array(
+			'name'   => 'required|min:3'
+		);
+
+		// Create a new validator instance from our validation rules
+		$validator = Validator::make(Input::all(), $rules);
+
+		// If validation fails, we'll exit the operation now.
+		if ($validator->fails())
+		{
+			// Ooops.. something went wrong
+			return false;
+		}
+		$tagName = Input::get('name');
+		$tagSlug = Str::slug($tagName);
+
+		$tag = Tag::where('slug', $tagSlug)->first();
+
+		if(is_null($tag)) {
+			// Create a new news tag
+			$tag = new Tag;
+			$tag->name            	= $tagName;
+			$tag->slug              = $tagSlug;
+			$tag->status            = 'on';
+			$tag->type           	= 'tag';
+			$tag->user_id           = Sentry::getId();
+			if(!$tag->save()) {
+				return false;
+			}
+		}
+
+		return $tag->toJson();
 	}
 
 	/**
@@ -79,7 +150,7 @@ class TagsController extends AdminController {
 		$tag = new Tag;
 
 		// Update the news tag data
-		$tag->name            	= e(Input::get('name'));
+		$tag->name            	= Input::get('name');
 		$tag->slug             = e(Str::slug(Input::get('name')));
 		if(!is_null($existTag = Tag::where('slug', $tag->slug)->first())) {
 			return Redirect::to("admin/tags/$existTag->id/edit")->with('success', Lang::get('admin/tags/message.update.success'));
@@ -160,7 +231,7 @@ class TagsController extends AdminController {
 		}
 
 		// Update the news post data
-		$tag->name            	= e(Input::get('name'));
+		$tag->name            	= Input::get('name');
 		$tag->slug             = e(Str::slug(Input::get('name')));
 		if(!is_null($existTag = Tag::where('slug', $tag->slug)->first())) {
 			return Redirect::to("admin/tags/$existTag->id/edit")->with('success', Lang::get('admin/tags/message.update.success'));

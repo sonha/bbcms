@@ -30,6 +30,9 @@ class Post extends Eloquent {
 
 		// Delete reference cates
 		$this->removeCate();
+
+		// Delete reference tags
+		$this->removeTag();
 		
 		// Delete the news post
 		return parent::delete();
@@ -106,5 +109,34 @@ class Post extends Eloquent {
 
 	public function removeCate() {
 		$this->categoryposts()->delete();
+	}
+
+	public function tags() {
+		return $this->belongsToMany('Tag','post_tag','post_id','tag_id')->where('type', 'tag');
+		// return $this->hasMany('CategoryPost','id');
+	}
+
+	public function topics() {
+		return $this->belongsToMany('Tag','post_tag','post_id','tag_id')->where('type', 'topic');
+		// return $this->hasMany('CategoryPost','id');
+	}
+
+	public function posttags() {
+		return $this->hasMany('PostTag');
+	}
+
+	public function removeTag() {
+		$this->posttags()->delete();
+	}
+
+	public function insertTags($tagIds) {
+		$tags = explode(",", $tagIds);
+		foreach ($tags as $tagId) {
+			# code...
+			$posttag = new PostTag;
+			$posttag->post_id = $this->id;
+			$posttag->tag_id = $tagId;
+			$posttag->save();
+		}
 	}
 }

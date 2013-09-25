@@ -4,7 +4,7 @@
 --
 -- Host: 127.0.0.1:3306
 
--- Generation Time: Sep 23, 2013 at 10:05 PM
+-- Generation Time: Sep 25, 2013 at 04:34 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.17
 
@@ -70,7 +70,7 @@ CREATE TABLE `category_post` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `cat_con_unique` (`category_id`,`post_id`),
   KEY `category_content_content_id_foreign` (`post_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=24 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=49 ;
 
 --
 -- Dumping data for table `category_post`
@@ -78,8 +78,10 @@ CREATE TABLE `category_post` (
 
 INSERT INTO `category_post` (`id`, `category_id`, `post_id`, `created_at`, `updated_at`) VALUES
 (23, 1, 1, '2013-09-23 13:06:58', '2013-09-23 13:06:58'),
-(21, 3, 3, '2013-09-23 10:18:09', '2013-09-23 10:18:09'),
-(20, 1, 3, '2013-09-23 10:18:09', '2013-09-23 10:18:09');
+(45, 3, 3, '2013-09-25 07:06:31', '2013-09-25 07:06:31'),
+(44, 1, 3, '2013-09-25 07:06:31', '2013-09-25 07:06:31'),
+(47, 1, 4, '2013-09-25 07:33:12', '2013-09-25 07:33:12'),
+(48, 3, 4, '2013-09-25 07:33:12', '2013-09-25 07:33:12');
 
 -- --------------------------------------------------------
 
@@ -147,20 +149,26 @@ CREATE TABLE `medias` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- Dumping data for table `medias`
 --
 
 INSERT INTO `medias` (`id`, `title`, `mpath`, `mname`, `user_id`, `created_at`, `updated_at`) VALUES
+(22, '', 'uploads/medias/2013/09/25', '25.09.2013_bb_1380091702.jpg', 1, '2013-09-24 23:48:22', '2013-09-24 23:48:22'),
+(21, '', 'uploads/medias/2013/09/25', '25.09.2013_bb_1380091677.jpg', 1, '2013-09-24 23:47:58', '2013-09-24 23:47:58'),
 (14, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966634.png', 1, '2013-09-23 13:03:54', '2013-09-23 13:03:54'),
 (15, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966639.png', 1, '2013-09-23 13:03:59', '2013-09-23 13:03:59'),
 (16, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966645.png', 1, '2013-09-23 13:04:06', '2013-09-23 13:04:06'),
 (17, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966650.png', 1, '2013-09-23 13:04:10', '2013-09-23 13:04:10'),
 (18, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966655.png', 1, '2013-09-23 13:04:15', '2013-09-23 13:04:15'),
 (19, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966660.png', 1, '2013-09-23 13:04:21', '2013-09-23 13:04:21'),
-(20, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966666.png', 1, '2013-09-23 13:04:26', '2013-09-23 13:04:26');
+(20, '', 'uploads/medias/2013/09/23', '23.09.2013_bb_1379966666.png', 1, '2013-09-23 13:04:26', '2013-09-23 13:04:26'),
+(23, '', 'uploads/medias/2013/09/25', '25.09.2013_bb_1380091711.jpg', 1, '2013-09-24 23:48:32', '2013-09-24 23:48:32'),
+(24, '', 'uploads/medias/2013/09/25', '25.09.2013_bb_1380091720.jpg', 1, '2013-09-24 23:48:41', '2013-09-24 23:48:41'),
+(25, '', 'uploads/medias/2013/09/25', '25.09.2013_bb_1380091743.jpg', 1, '2013-09-24 23:49:04', '2013-09-24 23:49:04'),
+(26, '', 'uploads/medias/2013/09/25', '25.09.2013_bb_1380091754.jpg', 1, '2013-09-24 23:49:14', '2013-09-24 23:49:14');
 
 -- --------------------------------------------------------
 
@@ -216,7 +224,7 @@ CREATE TABLE `posts` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `posts`
@@ -224,8 +232,38 @@ CREATE TABLE `posts` (
 
 INSERT INTO `posts` (`id`, `user_id`, `category_id`, `title`, `slug`, `content`, `excerpt`, `media_id`, `meta_title`, `meta_description`, `meta_keywords`, `status`, `allow_comments`, `is_featured`, `is_popular`, `showon_homepage`, `comment_count`, `post_type`, `publish_date`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 1, 1, 'BBCMS phi&ecirc;n bản 1.0', 'bbcms-phien-ban-10', '<p><span style="line-height: 1.6em;">L&agrave; ứng dụng ph&aacute;t triển dựa tr&ecirc;n framework m&atilde; nguồn mở </span><a href="http://laravel.com/" style="line-height: 1.6em;">Laravel 4</a><span style="line-height: 1.6em;">.</span></p>\r\n\r\n<h2>Chức năng</h2>\r\n\r\n<ul>\r\n	<li>Twitter Bootstrap 3</li>\r\n	<li>jQuery 1.10.2</li>\r\n	<li>T&ugrave;y biến&nbsp;Error Pages:\r\n	<ul>\r\n		<li>403</li>\r\n		<li>404</li>\r\n		<li>500</li>\r\n		<li>503</li>\r\n	</ul>\r\n	</li>\r\n	<li><strong>Editor</strong>\r\n	<ul>\r\n		<li>Quản l&yacute; người d&ugrave;ng v&agrave; nh&oacute;m người d&ugrave;ng\r\n		<ul>\r\n			<li>Th&ecirc;m sửa x&oacute;a người d&ugrave;ng</li>\r\n			<li>Ph&acirc;n quyền người d&ugrave;ng cụ thể</li>\r\n			<li>Th&ecirc;m sửa x&oacute;a nh&oacute;m người d&ugrave;ng</li>\r\n			<li>Ph&acirc;n quyền nh&oacute;m người d&ugrave;ng</li>\r\n		</ul>\r\n		</li>\r\n		<li>Quản l&yacute; tin\r\n		<ul>\r\n			<li>Đăng tin, x&eacute;t duyệt tin, xuất bản tin (theo ph&acirc;n quyền)</li>\r\n		</ul>\r\n		</li>\r\n		<li>Quản l&yacute; chuy&ecirc;n mục (đa cấp)</li>\r\n		<li>Quản l&yacute; b&igrave;nh luận</li>\r\n		<li>Quản l&yacute; thư viện\r\n		<ul>\r\n			<li>Tải ảnh, đặt đại diện</li>\r\n			<li>Thư viện theo người d&ugrave;ng</li>\r\n		</ul>\r\n		</li>\r\n		<li>Quản l&yacute; trang</li>\r\n	</ul>\r\n	</li>\r\n	<li><strong>Hệ thống đăng nhập</strong>\r\n	<ul>\r\n		<li>Đăng nhập</li>\r\n		<li>Đăng k&yacute;</li>\r\n		<li>Lấy lại mật khẩu</li>\r\n		<li>K&iacute;ch hoạt người d&ugrave;ng</li>\r\n	</ul>\r\n	</li>\r\n	<li><strong>T&agrave;i khoản người d&ugrave;ng</strong></li>\r\n	<li><strong>Trang li&ecirc;n hệ</strong></li>\r\n	<li><strong><a href="https://github.com/cartalyst/sentry">Cartalyst Sentry 2</a></strong></li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h2>Y&ecirc;u cầu hệ thống​</h2>\r\n\r\n<ul>\r\n	<li>PHP 5.3.7 or later</li>\r\n	<li>MCrypt PHP Extension</li>\r\n</ul>\r\n\r\n<h2><br />\r\nC&agrave;i đặt</h2>\r\n\r\n<p><em>đang cập nhật...</em><br />\r\n&nbsp;</p>\r\n\r\n<h2>Một số h&igrave;nh ảnh về BBCMS</h2>\r\n\r\n<p align="center">&nbsp;</p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966634.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966639.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966645.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966650.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966655.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966660.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center"><img src="/uploads/medias/2013/09/23/520x500/23.09.2013_bb_1379966666.png" style="padding: 10px 0; width: 500px; text-align: center" /></p>\r\n\r\n<p align="center">&nbsp;</p>\r\n', 'Chỉ bao gồm các thành phần cơ bản nhất của 1 editor. Bước đầu giúp các lập trình viên xây dựng các ứng dụng web về trang thông tin tổng hợp, tòa soạn điện tử mini, các trang thông tin doanh nghiệp...', 17, '', '', '', 'published', 1, 1, 1, 1, 0, 'post', '2013-09-21 14:40:17', '2013-09-20 10:29:31', '2013-09-23 13:06:58', NULL),
+(4, 1, 3, 'test b&agrave;i th&ecirc;m tag, topics', 'test-bai-them-tag-topics', '<p>xyz</p>\r\n', 'abc', 0, '', '', '', 'draft', 0, 0, 0, 0, 0, 'post', '2013-09-26 14:18:33', '2013-09-25 07:18:49', '2013-09-25 07:33:12', NULL),
 (2, 1, 0, 'Giới thiệu', 'gioi-thieu', '<p>Giới thiệu</p>\r\n', 'Giới thiệu', 0, NULL, NULL, NULL, 'hidden', 1, 0, 0, 0, 0, 'page', '2013-09-23 09:39:05', '2013-09-23 02:26:17', '2013-09-23 02:39:05', NULL),
-(3, 1, 0, 'Hướng dẫn c&agrave;i đặt', 'huong-dan-cai-dat', '<p>Hướng dẫn c&agrave;i đặt</p>\r\n', 'Hướng dẫn cài đặt', 0, '', '', '', 'published', 0, 0, 0, 0, 0, 'post', '2013-09-22 17:00:00', '2013-09-23 07:41:07', '2013-09-23 10:18:09', NULL);
+(3, 1, 1, 'Hướng dẫn c&agrave;i đặt', 'huong-dan-cai-dat', '<p>Hướng dẫn c&agrave;i đặt</p>\r\n', 'Hướng dẫn cài đặt', 0, '', '', '', 'published', 0, 0, 0, 0, 0, 'post', '2013-09-22 17:00:00', '2013-09-23 07:41:07', '2013-09-25 07:06:31', NULL),
+(5, 1, 0, 'addadada', 'addadada', '<p>adadadad</p>\r\n', 'adad', 0, '', '', '', 'draft', 0, 0, 0, 0, 0, 'post', '2013-09-25 07:30:56', '2013-09-25 07:30:56', '2013-09-25 07:33:00', '2013-09-25 07:33:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `post_tag`
+--
+
+CREATE TABLE `post_tag` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `post_id` int(11) NOT NULL,
+  `tag_id` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=44 ;
+
+--
+-- Dumping data for table `post_tag`
+--
+
+INSERT INTO `post_tag` (`id`, `post_id`, `tag_id`, `created_at`, `updated_at`) VALUES
+(42, 3, 14, '2013-09-25 07:06:31', '2013-09-25 07:06:31'),
+(41, 3, 15, '2013-09-25 07:06:31', '2013-09-25 07:06:31'),
+(40, 3, 16, '2013-09-25 07:06:31', '2013-09-25 07:06:31'),
+(39, 3, 17, '2013-09-25 07:06:31', '2013-09-25 07:06:31'),
+(38, 3, 14, '2013-09-25 07:06:31', '2013-09-25 07:06:31'),
+(43, 5, 14, '2013-09-25 07:30:56', '2013-09-25 07:30:56');
 
 -- --------------------------------------------------------
 
@@ -244,7 +282,7 @@ CREATE TABLE `tags` (
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `tags`
@@ -253,7 +291,16 @@ CREATE TABLE `tags` (
 INSERT INTO `tags` (`id`, `name`, `slug`, `type`, `status`, `news_count`, `user_id`, `created_at`, `updated_at`) VALUES
 (1, 'Chống tham nhũng', 'chong-tham-nhung', 'topic', 'on', 0, 1, '2013-09-23 16:26:53', '2013-09-23 09:26:53'),
 (2, 'thời gian c&ocirc;ng sở m&ugrave;a đ&ocirc;ng', 'thoi-gian-cong-so-mua-dong', 'topic', 'on', 0, 1, '2013-09-23 11:52:56', '2013-09-23 11:52:56'),
-(3, 'Sao lộ h&agrave;ng', 'sao-lo-hang', 'topic', 'on', 0, 1, '2013-09-23 11:53:56', '2013-09-23 11:53:56');
+(3, 'Sao lộ h&agrave;ng', 'sao-lo-hang', 'topic', 'on', 0, 1, '2013-09-23 11:53:56', '2013-09-23 11:53:56'),
+(4, 'Đời thừa', 'doi-thua', 'tag', 'on', 0, 1, '2013-09-25 04:23:42', '2013-09-25 04:23:42'),
+(16, 'Thật không thế', 'that-khong-the', 'tag', 'on', 0, 1, '2013-09-25 07:06:02', '2013-09-25 07:06:02'),
+(6, 'Mai Hương', 'mai-huong', 'tag', 'on', 0, 1, '2013-09-25 04:51:35', '2013-09-25 04:51:35'),
+(17, 'đùa thôi :D', 'dua-thoi-d', 'tag', 'on', 0, 1, '2013-09-25 07:06:07', '2013-09-25 07:06:07'),
+(8, 'timtrueman', 'timtrueman', 'tag', 'on', 0, 1, '2013-09-25 06:11:49', '2013-09-25 06:11:49'),
+(10, 'dờ cờ mờ', 'do-co-mo', 'tag', 'on', 0, 1, '2013-09-25 06:55:59', '2013-09-25 06:55:59'),
+(15, 'Ngon tuyệt phẩm', 'ngon-tuyet-pham', 'tag', 'on', 0, 1, '2013-09-25 07:05:56', '2013-09-25 07:05:56'),
+(14, 'bia Hà Nội', 'bia-ha-noi', 'tag', 'on', 0, 1, '2013-09-25 07:05:50', '2013-09-25 07:05:50'),
+(13, 'vì bé yêu', 'vi-be-yeu', 'tag', 'on', 0, 1, '2013-09-25 06:58:45', '2013-09-25 06:58:45');
 
 -- --------------------------------------------------------
 
@@ -341,7 +388,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `username`, `password`, `permissions`, `activated`, `activation_code`, `activated_at`, `last_login`, `persist_code`, `reset_password_code`, `first_name`, `last_name`, `created_at`, `updated_at`, `deleted_at`, `website`, `country`, `gravatar`) VALUES
-(1, 'binhbeer@taymay.vn', '', '$2y$10$Ybkr8jdakkvUd4EXBPP4aeaLA/iiD5kMGONiNC0o8ym3h.9ejLAY.', '{"admin":1,"user":1}', 1, NULL, NULL, '2013-09-20 23:35:22', '$2y$10$tiJOSVBOZI.48Fce2AWX8eIEHJIU04gL3HdToDimS9ZkZm.9gW7uq', NULL, 'Binh', 'BEER', '2013-09-12 03:37:00', '2013-09-20 23:35:22', NULL, 'http://taymay.vn', 'Viet Nam', ''),
+(1, 'binhbeer@taymay.vn', '', '$2y$10$Ybkr8jdakkvUd4EXBPP4aeaLA/iiD5kMGONiNC0o8ym3h.9ejLAY.', '{"admin":1,"user":1}', 1, NULL, NULL, '2013-09-24 23:46:18', '$2y$10$t6jRKS9TqIhNSi3U/qZoRuTNGgGxpY58847..do2DfdzE3.I0xeQ6', NULL, 'Binh', 'BEER', '2013-09-12 03:37:00', '2013-09-24 23:46:18', NULL, 'http://taymay.vn', 'Viet Nam', ''),
 (2, 'blacksheep@example.com', '', '$2y$10$3oMfmNfE9eYo496zd/Z71.jPbsbYNNRs9or6lwgEFdD7qlnxnMede', '{"superuser":-1}', 1, NULL, NULL, NULL, NULL, NULL, 'Black', 'Sheep', '2013-09-12 03:37:00', '2013-09-19 21:16:36', NULL, NULL, NULL, NULL),
 (3, 'member@test.com', '', '$2y$10$JbIWOUdbUBr/RRp4ccyuluaLhs4yoJg8ig29IDseMRmtC4ViejUGC', '', 1, 'P0qZAEAfpfiLQvHVPGAeALt1fD3DHj5oiQZ4Rmx5Tz', NULL, '2013-09-20 12:38:01', '$2y$10$VW2ts2PsJaNGsBASjEMOcu/BrK0RWyX3qJHXXJu6hlD9mmR7STCXe', NULL, 'member', 'test', '2013-09-20 12:13:47', '2013-09-23 08:20:47', '2013-09-23 08:20:47', NULL, NULL, NULL);
 

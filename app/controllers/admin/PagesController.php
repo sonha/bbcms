@@ -81,7 +81,7 @@ class PagesController extends AdminController {
 		$post = new Post;
 
 		// Update the page data
-		$post->title            = e(Input::get('title'));
+		$post->title            = Input::get('title');
 		$post->slug             = e(Str::slug(Input::get('title')));
 		$post->excerpt          = Input::get('excerpt');
 		$post->content          = Input::get('content');
@@ -164,7 +164,7 @@ class PagesController extends AdminController {
 		}
 
 		// Update the page data
-		$post->title            = e(Input::get('title'));
+		$post->title            = Input::get('title');
 		$post->slug             = e(Str::slug(Input::get('title')));
 		$post->excerpt          = Input::get('excerpt');
 		$post->content          = Input::get('content');

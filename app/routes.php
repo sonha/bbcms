@@ -52,8 +52,11 @@ Route::group(array('prefix' => 'admin'), function()
 	Route::group(array('prefix' => 'tags'), function()
 	{
 		Route::get('/', array('as' => 'tags', 'uses' => 'Controllers\Admin\TagsController@getIndex'));
+		Route::get('/listpopup', array('as' => 'list/tag', 'uses' => 'Controllers\Admin\TagsController@getIndexPopup'));
 		Route::post('addposts', 'Controllers\Admin\TagsController@postAddPost');
 		Route::get('create', array('as' => 'create/tag', 'uses' => 'Controllers\Admin\TagsController@getCreate'));
+		Route::post('ajaxcreate', 'Controllers\Admin\TagsController@postCreateTag');
+		Route::get('ajaxlist', 'Controllers\Admin\TagsController@getAjaxList');
 		Route::get('removepost', array('as' => 'removepost/tag', 'uses' => 'Controllers\Admin\TagsController@removePost'));
 		Route::post('create', 'Controllers\Admin\TagsController@postCreate');
 		Route::get('{tagId}/edit', array('as' => 'update/tag', 'uses' => 'Controllers\Admin\TagsController@getEdit'));

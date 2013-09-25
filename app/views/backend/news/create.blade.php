@@ -40,11 +40,21 @@
 						<hr />
 						<!-- Content -->
 						<div class="form-group {{ $errors->has('content') ? 'has-error' : '' }}">
-							<div>
+							<div style="padding-bottom: 4px;">
 								<label class="control-label" for="textareabox">Nội dung</label>
 								<span class="pull-right"><a data-toggle="modal" href="#modal_updateMedia" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-cloud-upload"></i> Thêm ảnh</a></span>
 							</div>
 							<textarea class="form-control" name="content" id="textareabox" value="content" rows="40">{{ Input::old('content') }}</textarea>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">Luồng sự kiện</div>
+							<div class="panel-body">
+								<div id="topicList"></div>
+								<hr />
+								<a data-toggle="modal" href="{{ URL::to('admin/tags/listpopup') }}" data-target="#modal_taglist" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-plus"></span> Thêm</a>
+
+								<input type="hidden" name="topics" id="topicIds" value="" />
+							</div>
 						</div>
 						<hr />
 						<!-- Post Slug -->
@@ -79,7 +89,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 colright">
 				<!-- Form actions -->
 				<div>
 					<div class="panel panel-default">
@@ -93,7 +103,7 @@
 								</select>
 							</div>
 							<div class="controls pull-right">
-								<button type="submit" class="btn btn-success btn-sm">Lưu</button>
+								<button type="submit" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-floppy-disk"></span> Lưu</button>
 							</div>
 						</div>
 					</div>
@@ -137,6 +147,17 @@
 					    <p class="help-block" id="cover-image">Chưa có ảnh đại diện</p>
 					    <input type="hidden" name="media_id" value="" id="media-cover-id" />
 					  </div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">Tags</div>
+					<div class="panel-body">
+						<div style="margin-bottom: 5px; padding-bottom: 5px; border-bottom: 1px solid #eeeeee">
+							<input type="text" name="tagname" id="tagName" class="form-control" value="" />
+						</div>
+						<div id="tagList">
+							<input type="hidden" name="tags" id="tagIds" value="" />
+						</div>
 					</div>
 				</div>
 				<div class="panel panel-default">

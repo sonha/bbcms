@@ -81,7 +81,7 @@ class CategoriesController extends AdminController {
 		$category = new Category;
 
 		// Update the news category data
-		$category->name            	= e(Input::get('name'));
+		$category->name            	= Input::get('name');
 		$category->slug             = e(Str::slug(Input::get('name')));
 		$category->parent_id        = e(Input::get('parent_id'));
 		$category->showon_menu      = e(Input::get('showon_menu'));
@@ -161,7 +161,7 @@ class CategoriesController extends AdminController {
 		}
 
 		// Update the news post data
-		$category->name            	= e(Input::get('name'));
+		$category->name            	= Input::get('name');
 		$category->slug             = e(Str::slug(Input::get('name')));
 		$category->parent_id        = e(Input::get('parent_id'));
 		$category->showon_menu      = e(Input::get('showon_menu'));
