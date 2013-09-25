@@ -100,6 +100,7 @@ function addTagtoPost(type, tid, name) {
                 ifModify: false,
                 success: function(data){
                     tagAppend(type, data.id, data.name);
+                    $('#tagName').val('').focus();
                 }
             });
         }
