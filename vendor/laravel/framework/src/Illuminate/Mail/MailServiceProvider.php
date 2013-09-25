@@ -120,7 +120,6 @@ class MailServiceProvider extends ServiceProvider {
 			// for delivering mail such as Sendgrid, Amazon SMS, or a custom server
 			// a developer has available. We will just pass this configured host.
 			$transport = AWSTransport::newInstance($aws_access_key, $aws_secret_key );
-
 			return $transport;
 		});
 	}

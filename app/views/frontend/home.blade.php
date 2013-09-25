@@ -2,19 +2,6 @@
 
 {{-- Page content --}}
 @section('content')
-	<div class="jumbotron">
-	  <div class="container">
-	    <h1>BBCMS! <small> - Editor version - </small></h1>
-	    <p>
-	    	<h4>Simple is best - free cms!</h4>
-	    	<hr />
-	    </p>
-	    <p align="center">	    	
-	    	<a class="btn btn-danger btn-lg" href="https://github.com/binhbeer/bbcms" target="_blank">DOWNLOAD BBCMS</a><br />
-	    	<small>v1.0 beta</small>
-	    </p>
-	  </div>
-	</div>
 	<h2>Tin mới</h2>
 	<hr />
 	@foreach ($posts as $post)
@@ -51,8 +38,4 @@
 	@endforeach
 
 	{{ $posts->links() }}
-
-    <div>
-    	<div class="fb-like-box" data-href="https://www.facebook.com/bbcmsvn" data-width="750" data-height="185" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
-    </div>
 @stop

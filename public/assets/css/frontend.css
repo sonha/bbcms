@@ -1,3 +1,31 @@
+.header {
+	background: url('../img/headerbg.jpg') top left;
+	color: #ffffff;
+	height: 280px;
+	border-bottom: 2px solid #cccccc
+}
+.navbar {
+	min-height: 30px;
+	margin-bottom: 0px;
+	border-bottom: 1px solid #2d74bb;
+}
+.nav a, .nav a:hover, .nav a:focus {
+	color: #ffffff;
+}
+.nav a {
+	background-color: transparent !important;
+}
+.nav a:hover, .nav a:focus { 
+	background-color: #2d74bb !important;
+}
+.nav .open a:focus {
+	background-color: #2d74bb;
+	border-color: #ffffff;
+}
+.bbcms {color: #ffffff}
+.bbcms:hover {text-decoration: none; color: #00d4fc}
+.banner {padding: 20px 0}
+.shares {padding: 14px 0px 10px 0px; border-bottom: 1px solid #cccccc; background-color: #efefef}
 .comment-info {
 	color: #76797c;
 	padding: 0 0 10px 0;
@@ -6,8 +34,11 @@
 }
 
 footer {	
+	border-top: 1px solid #ddd;
+	padding-top: 20px;
 	padding-bottom: 20px;
 	overflow: hidden;
+	background-color: #f8f8f8;
 }
 .footer-links {
 	margin: 10px 0;

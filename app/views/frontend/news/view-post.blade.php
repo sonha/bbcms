@@ -26,7 +26,7 @@
 
 {{-- Page content --}}
 @section('content')
-<h3>{{ $post->title }}</h3>
+<h1>{{ $post->title }}</h1>
 
 <p><strong>{{ $post->excerpt }}</strong></p>
 <p>{{ $post->content }}</p>

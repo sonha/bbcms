@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"font-",
+				"font-size"
+			],
+			[
 				"mar",
 				"margin-top"
 			],
@@ -232,18 +236,114 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/backend/inc/nav.blade.php",
+			"file": "app/lang/vi/admin/users/table.php",
 			"settings":
 			{
-				"buffer_size": 4726,
+				"buffer_size": 353,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/views/backend/inc/header.blade.php",
+			"file": "readme.md",
 			"settings":
 			{
-				"buffer_size": 671,
+				"buffer_size": 447,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/backend/dashboard.blade.php",
+			"settings":
+			{
+				"buffer_size": 331,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/backend/users/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 2422,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/backend/groups/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 1593,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/lang/vi/admin/groups/table.php",
+			"settings":
+			{
+				"buffer_size": 303,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/backend/layouts/default.blade.php",
+			"settings":
+			{
+				"buffer_size": 7291,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/frontend/layouts/default.blade.php",
+			"settings":
+			{
+				"buffer_size": 9082,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/frontend/home.blade.php",
+			"settings":
+			{
+				"buffer_size": 1794,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/config/mail.php",
+			"settings":
+			{
+				"buffer_size": 4262,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vendor/laravel/framework/src/Illuminate/Mail/MailServiceProvider.php",
+			"settings":
+			{
+				"buffer_size": 5258,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/AuthController.php",
+			"settings":
+			{
+				"buffer_size": 9361,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/frontend/news/view-post.blade.php",
+			"settings":
+			{
+				"buffer_size": 2098,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/frontend/news/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 1142,
 				"line_ending": "Windows"
 			}
 		}
@@ -284,138 +384,138 @@
 	},
 	"file_history":
 	[
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/layouts/default.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms-git/app/config/mail.php",
+		"/D/WORKS/UniServer10/www/bbcms-git/app/config/app.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/emails/forgot-password.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/emails/register-activate.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/composer.json",
+		"/D/WORKS/UniServer10/www/bbcms/bootstrap/autoload.php",
+		"/D/WORKS/UniServer10/www/bbcms/composer.lock",
+		"/D/WORKS/UniServer10/www/vibeyeu/server.php",
+		"/D/WORKS/UniServer10/www/vby/composer.json",
+		"/D/WORKS/UniServer10/www/vibeyeu/composer.json",
+		"/D/WORKS/UniServer10/www/beyeu4/composer.json",
+		"/D/WORKS/UniServer10/www/yeube/composer.json",
+		"/D/WORKS/UniServer10/www/beyeu2/composer.json",
+		"/D/WORKS/UniServer10/www/beyeu41/composer.json",
+		"/D/WORKS/UniServer10/www/beyeu/composer.json",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/account/ProfileController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/config/image.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/services/Image.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/facades/ImageFacade.php",
 		"/D/WORKS/UniServer10/www/bbcms/app/routes.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/pages/index.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/config/permissions.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/models/Authentication.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/models/Category.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/models/CategoryPost.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/models/Comment.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/models/Group.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/models/Media.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/models/Page.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/models/Post.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/models/Tag.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/models/TagPost.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/models/User.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/validation.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/table.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/reminders.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/pagination.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/general.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/button.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/auth/message.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/categories/message.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/categories/table.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/comments/message.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/comments/table.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/groups/message.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/medias/table.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/news/message.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/news/table.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/pages/message.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/pages/table.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/tags/message.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/tags/table.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/users/message.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/groups/table.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/medias/message.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/TagsController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/UsersController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/PagesController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/NewsController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/MediasController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/GroupsController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/DashboardController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/CommentsController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/CategoriesController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/AdminController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/AuthController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/AuthorizedController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/BaseController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/ContactUsController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/HomeController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/MediasController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/NewsController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/PagesController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/account/ChangeEmailController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/account/ChangePasswordController.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/controllers/account/DashboardController.php",
+		"/D/WORKS/UniServer10/www/pongo/paths.php",
+		"/D/WORKS/UniServer10/www/pongo/bundles/cms/controllers/blog.php",
+		"/D/WORKS/UniServer10/www/pongo/bundles/cms/controllers/cms_base.php",
+		"/D/WORKS/UniServer10/www/pongo/bundles/cms/controllers/ajax_banner.php",
+		"/D/WORKS/UniServer10/www/pongo/bundles/cms/routes.php",
+		"/D/WORKS/UniServer10/www/pongo/bundles/cms/start.php",
+		"/D/WORKS/UniServer10/www/pongo/application/controllers/site.php",
+		"/D/WORKS/UniServer10/www/pongo/application/routes.php",
+		"/D/WORKS/UniServer10/www/pongo/application/bundles.php",
+		"/D/WORKS/UniServer10/www/wordpress/wp-signup.php",
+		"/D/WORKS/UniServer10/www/wordpress/index.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/tags/index.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/tags/create.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/tags/edit.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/layouts/default.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/layouts/default.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/public/assets/css/admin.css",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/paginator/slider.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/news/postlist.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/news/index.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/public/assets/js/admin.js",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/layouts/widget.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/news/create.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/news/edit.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/categories/create.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/categories/index.blade.php",
 		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/pages/edit.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/pages/create.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/medias/upload.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/public/assets/js/pupload/handlers.dev.js",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/comments/index.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/medias/index.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/medias/my.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/medias/index.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/medias/my.blade.php",
 		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/users/index.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/inc/nav.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/inc/header.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/notallow.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/categories/edit.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/layouts/medias.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/vendor/laravel/framework/src/Illuminate/Support/Facades/File.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/pages/index.blade.php",
+		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/pages/create.blade.php",
 		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/groups/index.blade.php",
 		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/groups/edit.blade.php",
 		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/groups/create.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/MediasController.php",
 		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/users/edit.blade.php",
 		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/users/create.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/layouts/default.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/inc/header.blade.php",
 		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/layouts/news.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/public/assets/css/admin.css",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/news/edit.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/news/index.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/categories/create.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/categories/edit.blade.php",
 		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/comments/edit.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/comments/index.blade.php",
 		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/layouts/pages.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/categories/index.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/news/create.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/pages/message.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/comments/message.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/categories/message.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/admin/categories/table.php",
-		"/D/WORKS/UniServer10/www/wordpress/wp-includes/shortcodes.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/NewsController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/PagesController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/PagesController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/NewsController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/models/Post.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/HomeController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/home.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/notifications.blade.php",
-		"/D/WORKS/UniServer10/www/orchestra/app/config/database.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/AuthController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/backend/inc/nav.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/UsersController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/GroupsController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/CommentsController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/admin/CategoriesController.php",
-		"/D/WORKS/UniServer10/www/beyeu2/composer.json",
-		"/D/WORKS/UniServer10/www/bbcms/app/config/permissions.php",
-		"/D/WORKS/UniServer10/www/orchestra/vendor/orchestra/widget/src/config/config.php",
-		"/D/WORKS/UniServer10/www/beyeu/composer.json",
-		"/D/WORKS/UniServer10/www/yeube/composer.json",
-		"/D/WORKS/UniServer10/www/vby/composer.json",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/pages/view-page.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/public/assets/js/ckeditor/config.js",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/MediasController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/services/Image.php",
-		"/D/WORKS/UniServer10/www/bbcms/composer.json",
-		"/D/WORKS/UniServer10/www/bbcms/app/models/Page.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/validation.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/lang/vi/auth/message.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/news/view-post.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/news/index.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/ContactUsController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/contact-us.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/config/mail.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/AdminController.php",
-		"/D/WORKS/UniServer10/www/bbcms/vendor/nesbot/carbon/readme.md",
-		"/D/WORKS/UniServer10/www/bbcms/vendor/nesbot/carbon/src/Carbon/Carbon.php",
-		"/D/WORKS/UniServer10/www/bbcms/public/assets/css/frontend.css",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/layouts/account.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/auth/signup.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/auth/signin.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/auth/forgot-password.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/auth/forgot-password-confirm.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/account/profile.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/account/change-password.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/views/frontend/account/change-email.blade.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/lang/en/validation.php",
-		"/D/WORKS/UniServer10/www/bbcms/readme.md",
-		"/D/WORKS/UniServer10/www/bbcms/app/config/app.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/config/database.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/account/ProfileController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/account/ChangePasswordController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/account/ChangeEmailController.php",
-		"/D/WORKS/UniServer10/www/bbcms/app/controllers/BaseController.php",
-		"/D/WORKS/UniServer10/www/bbcms/_composer.lock",
-		"/D/WORKS/UniServer10/www/vibeyeu/readme.md",
-		"/D/WORKS/UniServer10/www/vibeyeu/composer.json",
-		"/D/WORKS/UniServer10/www/vibeyeu/vendor/raftalks/ravel/composer.json",
-		"/D/WORKS/UniServer10/www/vibeyeu/vendor/raftalks/ravel/src/controllers/api/MediaUploadApiController.php",
-		"/D/WORKS/UniServer10/www/vibeyeu/vendor/raftalks/ravel/src/controllers/ContentApi.php",
-		"/D/WORKS/UniServer10/www/vibeyeu/vendor/raftalks/ravel/src/controllers/admin/PostsAdminController.php",
-		"/D/WORKS/UniServer10/www/vibeyeu/vendor/raftalks/ravel/src/controllers/admin/UsersAdminController.php",
-		"/D/WORKS/UniServer10/www/vibeyeu/vendor/raftalks/ravel/src/controllers/admin/AdminUserLoginController.php",
-		"/D/WORKS/UniServer10/www/vibeyeu/vendor/raftalks/ravel/src/controllers/AdminController.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/controllers/admin/PagesController.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/models/Page.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/layouts/pages.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/pages/create.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/pages/edit.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/pages/index.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/inc/nav.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/routes.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/models/HbCategory.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/models/HbContent.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/controllers/admin/HandbooksController.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/controllers/admin/UsersController.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/controllers/admin/CategoriesController.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/categories/edit.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/news/edit.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/comments/edit.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/controllers/NewsController.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/controllers/admin/NewsController.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/models/Post.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/models/Category.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/public/assets/js/admin.js",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/categories/index.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/categories/create.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/config/permissions.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/frontend/about-us.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/news/index.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/comments/index.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/controllers/admin/CommentsController.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/layouts/news.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/users/index.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/groups/edit.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/groups/index.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/backend/layouts/medias.blade.php",
-		"/D/WORKS/UniServer10/www/giadinhnho/app/views/medias/my.blade.php"
+		"/D/WORKS/UniServer10/www/wordpress/wp-includes/shortcodes.php"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
@@ -436,6 +536,37 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"SmtpTransport",
+			"ới</h2>\n	<hr />",
+			"bài viết",
+			"categories",
+			", category_id: catId",
+			"modal_updateMedia",
+			"category",
+			"CategoriesController",
+			"off",
+			"on",
+			"status",
+			"category",
+			"cat",
+			"cate",
+			"categories",
+			"category",
+			"Category",
+			"category",
+			"catId",
+			"categories",
+			"category",
+			"Category",
+			"category",
+			"catId",
+			"category",
+			"withTrashed",
+			"news",
+			"active",
+			"return App::abort(403);",
+			"bài viết ",
+			"hr",
 			"$page",
 			"Page::",
 			"category",
@@ -532,38 +663,7 @@
 			"span10",
 			"control-group",
 			"blog",
-			"blogs",
-			"NewsController",
-			"blogs",
-			"blog",
-			"Blog",
-			"blog",
-			"news",
-			"Blog",
-			"blog",
-			"BlogController",
-			"blogId",
-			"blogs",
-			"BlogsController",
-			"blogs",
-			"$collection->requireDirectory('../../../vendor/twbs/bootstrap/js');",
-			"sentry",
-			"mcrypt",
-			"mb_",
-			"mb_string",
-			"extension",
-			"sent_mail",
-			"</option>",
-			"\">",
-			"<option value=\"",
-			"?>\n",
-			"stat",
-			"Previous",
-			"statistic",
-			"glug",
-			"pTopic",
-			"glug",
-			"tag"
+			"blogs"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -583,53 +683,245 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 11,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/backend/inc/nav.blade.php",
+					"file": "app/lang/vi/admin/users/table.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4726,
+						"buffer_size": 353,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2540,
-								2540
+								169,
+								169
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 513.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/backend/inc/header.blade.php",
+					"file": "readme.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 671,
+						"buffer_size": 447,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								671,
-								671
+								275,
+								275
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/backend/dashboard.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								318,
+								318
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/backend/users/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1727,
+								1715
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 684.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/backend/groups/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1593,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1191,
+								1191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 342.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/lang/vi/admin/groups/table.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								296,
+								296
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/backend/layouts/default.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7291,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								365,
+								211
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/views/frontend/layouts/default.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9082,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								454,
+								454
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/views/frontend/home.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1794,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								445,
+								445
 							]
 						],
 						"settings":
@@ -640,6 +932,146 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/config/mail.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25,
+								25
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "vendor/laravel/framework/src/Illuminate/Mail/MailServiceProvider.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5258,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3133,
+								3133
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/controllers/AuthController.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 9361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5987,
+								5987
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4440.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "app/views/frontend/news/view-post.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2098,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								565,
+								565
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "app/views/frontend/news/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1142,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								909,
+								897
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -694,6 +1126,26 @@
 		"selected_items":
 		[
 			[
+				"admin.js",
+				"public\\assets\\js\\admin.js"
+			],
+			[
+				"nav",
+				"app\\views\\backend\\inc\\nav.blade.php"
+			],
+			[
+				"admin.css",
+				"public\\assets\\css\\admin.css"
+			],
+			[
+				"file.php",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php"
+			],
+			[
+				"file",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\File.php"
+			],
+			[
 				"admin.c",
 				"public\\assets\\css\\admin.css"
 			],
@@ -708,10 +1160,6 @@
 			[
 				"pos",
 				"app\\models\\Post.php"
-			],
-			[
-				"admin.js",
-				"public\\assets\\js\\admin.js"
 			],
 			[
 				"admin",

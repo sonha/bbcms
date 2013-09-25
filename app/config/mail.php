@@ -23,8 +23,8 @@ return array(
 	|--------------------------------------------------------------------------
 	|
 	*/
-	'aws_access_key' => '',
-	'aws_secret_key' => '',
+	'aws_access_key' => 'AKIAJK63VZIWFOCHB2FQ',
+	'aws_secret_key' => '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',
 	/*
 	|--------------------------------------------------------------------------
 	| SMTP Host Address
@@ -62,7 +62,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	'from' => array('address' => 'binhbeer@taymay.vn', 'name' => 'BBCMS'),
 
 	/*
 	|--------------------------------------------------------------------------

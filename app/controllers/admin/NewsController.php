@@ -52,6 +52,7 @@ class NewsController extends AdminController {
 	 */
 	public function getSearch()
 	{
+		$status = Input::get('status');
 		$keyword = Input::get('key');
 		$category_id = Input::get('category_id');
 		$keyslug = Str::slug($keyword);
@@ -65,7 +66,7 @@ class NewsController extends AdminController {
 		$categories = Category::orderBy('showon_menu', 'ASC')->get();
 
 		// Show the page
-		return View::make('backend/news/index', compact('posts', 'categories', 'category_id', 'keyword'));
+		return View::make('backend/news/index', compact('posts', 'categories', 'category_id', 'keyword', 'status'));
 	}
 
 	/**

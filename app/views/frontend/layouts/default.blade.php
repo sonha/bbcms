@@ -6,7 +6,7 @@
 		<meta charset="utf-8" />
 		<title>
 			@section('title')
-			BBCMS v1.0
+			BBCMS
 			@show
 		</title>
 		<meta name="keywords" content="bbcms" />
@@ -38,74 +38,93 @@
 
 	<body>
 		<div id="fb-root"></div>
-		<!-- Container -->
-		<div class="container">
-			<!-- Navbar -->
-			<nav class="navbar navbar-danger" role="navigation" style="border-bottom: 1px solid #eee">
-			  <!-- Brand and toggle get grouped for better mobile display -->
-			  <div class="navbar-header">
-			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-			      <span class="sr-only">Toggle navigation</span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			    </button>
-			    <a class="navbar-brand" href="/">BBCMS</a>
-			  </div>
-
-			  <!-- Collect the nav links, forms, and other content for toggling -->
-			  <div class="collapse navbar-collapse navbar-ex1-collapse">
-			    <ul class="nav navbar-nav">
-			      <li class="active"><a href="/">Trang chủ</a></li>
-			      <li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Chuyên mục <b class="caret"></b></a>
-			        <ul class="dropdown-menu">
-			        	@foreach( $categories as $category )
-			        		@if($category->parent_id == 0)
-				          		<li><a href="#">{{ $category->name }}</a></li>
-				          		@foreach ($category->subscategories as $subcate)
-				          			<li><a href="#"> - {{ $subcate->name }}</a></li>
-								@endforeach
-							@endif
-			        	@endforeach
-			        </ul>
-			      </li>
-				  
-			    </ul>
-			    <ul class="nav navbar-nav navbar-right">
-			      @if (Sentry::check())
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Chào, {{ Sentry::getUser()->first_name }} <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							@if(Sentry::getUser()->hasAccess('admin'))
-								<li><a href="{{ route('admin') }}"><i class="icon-cog"></i> Quản trị</a></li>
-							@endif
-							<li{{ (Request::is('account/profile') ? ' class="active"' : '') }}><a href="{{ route('profile') }}"><i class="icon-user"></i> Thông tin cá nhân</a></li>
-							<li class="divider"></li>
-							<li><a href="{{ route('logout') }}"><i class="icon-off"></i> Thoát</a></li>
-						</ul>
-					</li>
-			      @else			      	
-					<li {{ (Request::is('auth/signin') ? 'class="active"' : '') }}><a href="{{ route('signin') }}">Đăng nhập</a></li>
-					<li {{ (Request::is('auth/signup') ? 'class="active"' : '') }}><a href="{{ route('signup') }}">Đăng kí</a></li>
-			      @endif
-			    </ul>
-			  </div><!-- /.navbar-collapse -->
+		<div class="header">
+		<!-- Navbar -->
+			<nav class="navbar navbar-danger" role="navigation">
+				<div class="container">
+				  <!-- Collect the nav links, forms, and other content for toggling -->
+				  <div class="collapse navbar-collapse navbar-ex1-collapse">
+				    <ul class="nav navbar-nav">
+				      <li><a href="/">Trang chủ</a></li>
+				      <li class="dropdown">
+				        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Chuyên mục <b class="caret"></b></a>
+				        <ul class="dropdown-menu">
+				        	@foreach( $categories as $category )
+				        		@if($category->parent_id == 0)
+					          		<li><a href="#">{{ $category->name }}</a></li>
+					          		@foreach ($category->subscategories as $subcate)
+					          			<li><a href="#"> - {{ $subcate->name }}</a></li>
+									@endforeach
+								@endif
+				        	@endforeach
+				        </ul>
+				      </li>
+					  
+				    </ul>
+				    <ul class="nav navbar-nav navbar-right">
+				      @if (Sentry::check())
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Chào, {{ Sentry::getUser()->first_name }} <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								@if(Sentry::getUser()->hasAccess('admin'))
+									<li><a href="{{ route('admin') }}"><i class="icon-cog"></i> Quản trị</a></li>
+								@endif
+								<li{{ (Request::is('account/profile') ? ' class="active"' : '') }}><a href="{{ route('profile') }}"><i class="icon-user"></i> Thông tin cá nhân</a></li>
+								<li class="divider"></li>
+								<li><a href="{{ route('logout') }}"><i class="icon-off"></i> Thoát</a></li>
+							</ul>
+						</li>
+				      @else			      	
+						<li {{ (Request::is('auth/signin') ? 'class="active"' : '') }}><a href="{{ route('signin') }}">Đăng nhập</a></li>
+						<li {{ (Request::is('auth/signup') ? 'class="active"' : '') }}><a href="{{ route('signup') }}">Đăng kí</a></li>
+				      @endif
+				    </ul>
+				  </div><!-- /.navbar-collapse -->
+			  	</div>
 			</nav>
-			<!-- Notifications -->
-			@include('frontend/notifications')
-
+			<div class="container">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row banner">
+						<div class="col-md-6">
+						    <a class="bbcms" href="/"><h1 style="font-size: 70px">BBCMS <span style="font-size: 18px;"> - Newspapers Editor - </span> </h1></a>
+						</div>
+						<div class="col-md-6">
+							<br />
+							<br />
+						    <p align="right">
+						    	<a class="btn btn-danger btn-lg" href="https://github.com/binhbeer/bbcms" target="_blank">Download on Github</a><br />
+						    	<small>v1.0 beta</small>
+						    </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="shares">
+			<div class="row">
+				<div class="col-md-3" align="right"></div>
+				<div class="col-md-2" align="right">
+					<div class="fb-like" data-href="https://www.facebook.com/bbcmsvn" data-width="200" data-layout="button_count" data-show-faces="false" data-send="true"></div>
+				</div>
+				<div class="col-md-6" align="left">					
+					<iframe src="http://ghbtns.com/github-btn.html?user=binhbeer&repo=bbcms&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+					<iframe src="http://ghbtns.com/github-btn.html?user=binhbeer&repo=bbcms&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+					<iframe src="http://ghbtns.com/github-btn.html?user=binhbeer&repo=bbcms&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="160" height="20"></iframe>
+				</div>
+			</div>
+		</div>
+		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<!-- Content -->
 					@yield('content')
 				</div>
 			</div>
+		</div>		
 
-			<hr />
-
-			<!-- Footer -->
-			<footer>
+		<!-- Footer -->
+		<footer>
+			<div class="container">
 				<div class="col-md-9">
 					<ul class="footer-links">
 			          <li>
@@ -118,7 +137,7 @@
 			          <li><a href="{{ route('lien-he') }}"><i class="icon-file icon-white"></i> Liên hệ</a></li>
 			        </ul>
 		        </div>
-		        <div class="col-md-3">
+		        <div class="col-md-3" align="center">
 		        	Give me some beer to keep updating ... <hr />
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 						<input type="hidden" name="cmd" value="_s-xclick">
@@ -128,8 +147,8 @@
 						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 					</form>
 		        </div>
-			</footer>
-		</div>
+	        </div>
+		</footer>
 
 		<!-- Javascripts
 		================================================== -->

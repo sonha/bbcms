@@ -260,6 +260,7 @@ class AuthController extends BaseController {
 			// Even though the email was not found, we will pretend
 			// we have sent the password reset code through email,
 			// this is a security measure against hackers.
+			return Redirect::route('forgot-password')->with('error', Lang::get('auth/message.account_not_found'));
 		}
 
 		//  Redirect to the forgot password
